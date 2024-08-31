@@ -18,7 +18,6 @@ function Login() {
 
         try {
             const session = await authService.login(data)
-
             if (session) {
                 const userData = await authService.getCurrentUser()
 
@@ -82,9 +81,9 @@ function Login() {
 
                 <Input 
                 label='Password: '
-                type='Password'
+                type='password'
                 placeholder='Enter Your Password'
-                {...register("Password", {
+                {...register("password", {
                     required: true,
                 })}
                 />
